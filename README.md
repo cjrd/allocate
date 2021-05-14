@@ -29,7 +29,7 @@ func main() {
     topStruct := new(TopLevelStruct)
     fmt.Printf("before using allocate.Zero: %v\n", topStruct)
 
-    allocate.Zero(&ptrStruct)
+    allocate.Zero(&topStruct)
     fmt.Printf("post allocate.Zero: %v\n", topStruct)
     fmt.Printf("topStruct.MyEmbeddedStruct.SomeInt==%d\n", topStruct.MyEmbeddedStruct.SomeInt)
     // Note that panics would occur by executing `*topStruct.MyEmbeddedStruct` or
